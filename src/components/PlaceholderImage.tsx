@@ -61,7 +61,13 @@ export default function PlaceholderImage({
         style={{ borderColor: ink, opacity: 0.28 }}
       />
 
-      <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-4 px-6 text-center">
+      {/* Full-bleed frames sit behind bottom-anchored overlay copy, so the
+          caption moves up top and softens to stay out of its way. */}
+      <div
+        className={`relative z-10 flex h-full w-full flex-col items-center gap-4 px-6 text-center ${
+          fill ? "justify-start pt-28 opacity-70 sm:pt-32" : "justify-center"
+        }`}
+      >
         <Monogram className="h-11 w-11 opacity-45" color={ink} />
         <p
           className="label max-w-[22ch] leading-relaxed"
