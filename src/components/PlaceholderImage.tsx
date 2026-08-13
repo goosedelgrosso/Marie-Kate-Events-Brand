@@ -48,7 +48,7 @@ export default function PlaceholderImage({
 
   return (
     <div
-      className={`grain relative isolate overflow-hidden ${fill ? "absolute inset-0 h-full w-full" : ""} ${className}`}
+      className={`grain isolate overflow-hidden ${fill ? "absolute inset-0 h-full w-full" : "relative"} ${className}`}
       style={{
         background: tones[tone],
         ...(fill ? {} : { aspectRatio: ratio }),
