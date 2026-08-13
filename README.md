@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marie Kate Events
 
-## Getting Started
+Brand website for Marie Kate Events. Wedding planning, design, and coordination.
 
-First, run the development server:
+Built with Next.js (App Router), TypeScript, and Tailwind CSS v4. Deployed on Vercel.
+
+## Running it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | What it is |
+|------|-----------|
+| `src/app/` | Pages. Each folder is a route. |
+| `src/content/` | All the words. Services, portfolio, journal, testimonials. |
+| `src/components/` | Shared pieces of the design (header, footer, buttons, image frames). |
+| `src/lib/site.ts` | Business details: email, Instagram, location. |
+| `src/app/globals.css` | Colors, fonts, and the design tokens everything else uses. |
 
-## Learn More
+To change copy, edit the files in `src/content/`. You should not need to touch anything else.
 
-To learn more about Next.js, take a look at the following resources:
+## This is a first draft
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site is fully built and deployable, but several things are stand-ins on purpose:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Every photo is a labeled placeholder frame.** Each one describes the shot that belongs there. Real film photography drops in one for one.
+- **Testimonials are placeholders** and marked as such on the page. Nothing here came from a real client. Replace them in `src/content/site-copy.ts` before the site goes live.
+- **The portfolio holds the four styled shoot concepts**, not real weddings.
+- **Journal posts are drafts.** One has a sample structure to show the layout.
+- **The inquiry form and the guide signup are not connected to anything yet.** Wiring notes are in the comments at the top of `src/components/InquiryForm.tsx` and `src/components/LeadMagnet.tsx`.
+- **Contact details in `src/lib/site.ts` are placeholders** until the founders confirm the business email, Instagram handle, and service area.
 
-## Deploy on Vercel
+There is no AS SEEN IN section and no pricing, both intentional.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploying
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pushing to `main` deploys automatically through Vercel.
