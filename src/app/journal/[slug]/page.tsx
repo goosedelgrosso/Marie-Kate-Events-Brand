@@ -56,11 +56,17 @@ export default async function JournalPostPage({
             {post.sections ? (
               <>
                 {post.sections.map((section, i) => (
-                  <Reveal key={section.heading} delay={i * 50} className="mb-14">
-                    <h2 className="font-display text-3xl leading-snug">
-                      {section.heading}
-                    </h2>
-                    {section.body.map((p) => (
+                  <Reveal
+                    key={section.heading ?? `section-${i}`}
+                    delay={i * 50}
+                    className="mb-14"
+                  >
+                    {section.heading && (
+                      <h2 className="font-display text-3xl leading-snug">
+                        {section.heading}
+                      </h2>
+                    )}
+                    {section.body?.map((p) => (
                       <p
                         key={p}
                         className="text-espresso-soft mt-5 text-base leading-[1.9] sm:text-lg"
@@ -68,12 +74,26 @@ export default async function JournalPostPage({
                         {p}
                       </p>
                     ))}
+                    {section.list && (
+                      <ul className="mt-6 grid gap-3">
+                        {section.list.map((item) => (
+                          <li
+                            key={item}
+                            className="text-espresso-soft flex items-start gap-3 text-base"
+                          >
+                            <span className="bg-sage mt-3 h-px w-4 shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {section.note && (
+                      <p className="border-sage text-espresso-soft mt-8 border-l-2 pl-6 text-base leading-[1.9] italic">
+                        {section.note}
+                      </p>
+                    )}
                   </Reveal>
                 ))}
-                <PlaceholderNote>
-                  Sample post structure. All body copy to be written by the
-                  founders.
-                </PlaceholderNote>
               </>
             ) : (
               <Reveal className="text-center">
