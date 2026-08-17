@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { PlaceholderNote } from "./ui";
 
 const services = [
   "Full-Service Planning",
@@ -39,16 +38,42 @@ function Field({
 }
 
 /**
- * Inquiry form. Submission is not wired to a backend yet.
+ * Inquiry form. Posts to /api/inquire, which emails the founders.
  *
- * To make it live, pick one and replace the handler below:
- *   - Formspree: POST the FormData to https://formspree.io/f/<id>
- *   - Resend + a Next route handler at /api/inquire, sending to the
- *     founders' business email
- * Either way, keep the same fields so nothing here has to change.
+ * The submit handler must never show the thank-you screen unless the
+ * server confirms delivery — a silent failure loses a real client.
  */
 export default function InquiryForm() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setSending(true);
+    setError(null);
+
+    const payload = Object.fromEntries(
+      new FormData(event.currentTarget).entries(),
+    );
+
+    try {
+      const response = await fetch("/api/inquire", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) throw new Error();
+      setSent(true);
+    } catch {
+      setError(
+        "Something went wrong sending your inquiry. Please email us at hello@mariekateevents.com and we will get right back to you.",
+      );
+    } finally {
+      setSending(false);
+    }
+  }
 
   if (sent) {
     return (
@@ -62,21 +87,12 @@ export default function InquiryForm() {
           within a few days. In the meantime, congratulations. This is a good
           season.
         </p>
-        <PlaceholderNote className="mt-4">
-          Demo only. Nothing was actually sent.
-        </PlaceholderNote>
       </div>
     );
   }
 
   return (
-    <form
-      className="grid gap-x-10 gap-y-9 sm:grid-cols-2"
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSent(true);
-      }}
-    >
+    <form className="grid gap-x-10 gap-y-9 sm:grid-cols-2" onSubmit={handleSubmit}>
       <Field label="Your name">
         <input name="name" required className="field" placeholder="First and last" />
       </Field>
@@ -166,16 +182,28 @@ export default function InquiryForm() {
         />
       </Field>
 
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-0 w-0 opacity-0"
+      />
+
       <div className="flex flex-col items-start gap-5 sm:col-span-2">
         <button
           type="submit"
-          className="label border-espresso bg-espresso text-ivory hover:bg-espresso/0 hover:text-espresso border px-10 py-4 transition-colors duration-500"
+          disabled={sending}
+          className="label border-espresso bg-espresso text-ivory hover:bg-espresso/0 hover:text-espresso border px-10 py-4 transition-colors duration-500 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          Send Your Inquiry &rarr;
+          {sending ? "Sending…" : "Send Your Inquiry →"}
         </button>
-        <PlaceholderNote>
-          Demo form. Not connected to email yet.
-        </PlaceholderNote>
+        {error && (
+          <p role="alert" className="text-espresso-soft max-w-md text-sm">
+            {error}
+          </p>
+        )}
       </div>
     </form>
   );
