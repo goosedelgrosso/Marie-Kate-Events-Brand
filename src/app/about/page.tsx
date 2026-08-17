@@ -24,12 +24,6 @@ const story = [
     ],
   },
   {
-    heading: "Where the name comes from",
-    body: [
-      "Marie and Kate are our middle names. It felt right to build the business on the parts of our names that only the people closest to us ever use.",
-    ],
-  },
-  {
     heading: "What we actually do for you",
     body: [
       "The honest version is that we take the weight of it. We are the ones emailing the florist, rebuilding the timeline when the ceremony shifts twenty minutes, and quietly fixing the thing you never find out went wrong.",
