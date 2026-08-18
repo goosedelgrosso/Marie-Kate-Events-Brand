@@ -91,6 +91,17 @@ export const services: Service[] = [
     ],
     photo: "Film photo: Lexi and Maddy with magazines in front of their faces",
   },
+  {
+    slug: "other-than-weddings",
+    number: "04",
+    name: "Other Than Weddings",
+    short:
+      "Need help other than a wedding? We've got you! We love celebrating all of life's special moments.",
+    // AI-DRAFTED INTRO. Written at the founders' request, pending their approval.
+    intro:
+      "Not every celebration is a wedding. Bridal showers, bachelorette parties, baby showers, birthdays, engagement parties, and everything in between get the same care we bring to a wedding day. We take on the planning, the details, and the run of the day itself, so you get to actually enjoy the party you are throwing.",
+    photo: "Film photo: the group on the Bach trip",
+  },
 ];
 
 export type AddOnGroup = { title: string; items: string[] };

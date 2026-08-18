@@ -6,6 +6,7 @@ const services = [
   "Full-Service Planning",
   "Partial Planning",
   "Wedding Day Coordination",
+  "Other Than Weddings",
   "A la carte add-ons",
   "Not sure yet",
 ];
