@@ -126,7 +126,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1400px] items-center gap-14 lg:grid-cols-2 lg:gap-24">
           <Reveal>
             <PlaceholderImage
-              label="Film photo: Lexi and Maddy standing together, black and white"
+              label="Studio photo: Lexi and Maddy standing together, black and white"
               ratio="4/5"
               tone="ivory"
             />

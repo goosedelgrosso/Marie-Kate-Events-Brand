@@ -20,7 +20,7 @@ export default function LeadMagnet() {
       <div className="mx-auto grid max-w-[1200px] items-center gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-24">
         <Reveal>
           <PlaceholderImage
-            label="Film photo: Lexi and Maddy with a notepad and laptop, sitting down"
+            label="Studio photo: Lexi and Maddy standing, each holding a laptop"
             ratio="1/1"
             tone="taupe"
           />

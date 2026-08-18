@@ -56,7 +56,7 @@ export default function AboutPage() {
       <section className="px-6 pb-24 sm:px-10">
         <Reveal className="mx-auto max-w-[1200px]">
           <PlaceholderImage
-            label="Editorial film photo: Lexi and Maddy laughing, sitting down"
+            label="Studio photo: Lexi and Maddy sitting together on a stool"
             ratio="16/9"
             tone="taupe"
           />

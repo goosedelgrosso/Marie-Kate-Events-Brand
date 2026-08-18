@@ -38,7 +38,7 @@ export const services: Service[] = [
       "Wedding day management",
       "Setup and breakdown",
     ],
-    photo: "Film photo: Lexi and Maddy sitting on the ground planning",
+    photo: "Studio photo: Lexi and Maddy planning on the floor, laptop and Marie Kate stationery",
   },
   {
     slug: "partial-planning",
@@ -89,7 +89,7 @@ export const services: Service[] = [
         ],
       },
     ],
-    photo: "Film photo: Lexi and Maddy with magazines in front of their faces",
+    photo: "Studio photo: Lexi and Maddy holding bridal magazines in front of their faces",
   },
   {
     slug: "other-than-weddings",
