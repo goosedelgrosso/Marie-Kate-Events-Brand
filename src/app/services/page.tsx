@@ -22,7 +22,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="However much of it you want us to carry"
+        title="Services"
         intro="Four ways to work together, from the first idea to the last dance. If none of them fit exactly, tell us. We build around what you actually need."
       />
 

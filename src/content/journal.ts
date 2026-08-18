@@ -33,7 +33,7 @@ export const posts: JournalPost[] = [
     readTime: "4 min read",
     excerpt:
       "Before the Pinterest boards, venue tours, spreadsheets, and group texts begin, give yourselves a minute to actually enjoy it. Here is where we tell every newly engaged couple to start.",
-    cover: "Film photo: ring on hand, soft window light",
+    cover: "Film photo: the moment of getting engaged",
     draft: false,
     sections: [
       {
@@ -132,7 +132,7 @@ export const posts: JournalPost[] = [
     readTime: "3 min read",
     excerpt:
       "The two get used interchangeably, and they are not the same job. The biggest difference is when they step in and how involved they are along the way.",
-    cover: "Film photo: timeline and pen on a linen tablecloth",
+    cover: "Film photo: Maddy laying on the ground",
     draft: false,
     sections: [
       {
@@ -209,7 +209,7 @@ export const posts: JournalPost[] = [
     readTime: "7 min read",
     excerpt:
       "Twelve months, broken down month by month, so you know what deserves your attention now, what can wait, and when it is time to start making the smaller decisions.",
-    cover: "Film photo: calendar, coffee, and a stack of samples",
+    cover: "Film photo: Maddy holding a paper reading \"you wouldn't be stressed\"",
     draft: false,
     sections: [
       {

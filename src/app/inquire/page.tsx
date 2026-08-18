@@ -30,7 +30,7 @@ export default function InquirePage() {
 
           <Reveal delay={140} className="lg:sticky lg:top-32">
             <PlaceholderImage
-              label="Film photo: handwritten note, ring, and flowers"
+              label="Film photo: Lexi and Maddy laughing, at Studios"
               ratio="4/5"
               tone="taupe"
             />

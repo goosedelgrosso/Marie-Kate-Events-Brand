@@ -7,43 +7,39 @@ import { ClosingCta, PlaceholderNote, SectionLabel } from "@/components/ui";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Maddy and Lexi, the two best friends behind Marie Kate Events.",
+    "Meet Lexi Marie and Maddy Kate, the two best friends behind Marie Kate Events.",
 };
 
-/**
- * PLACEHOLDER COPY. Written as a starting point in the founders' voice, not as
- * finished copy. Maddy and Lexi should rewrite this in their own words. See
- * BRAND-BRIEF.md section 8 for what it needs to cover.
- */
 const story = [
   {
     heading: "How we got here",
     body: [
-      "We met the way most good friendships start, which is to say by accident and then all at once. Somewhere between late nights and a lot of shared calendars, we figured out that the thing we both loved most was pulling people together and making the room feel like something.",
-      "Weddings were the natural place for that to land. Not the spectacle of them, the people. The grandmother who has been waiting for this day. The friend who flew in overnight. The ten minutes right before the ceremony when everything goes quiet.",
+      "We met in seventh grade and have been side by side ever since. We spent four years on the mountain bike team together, and at sixteen, we found our way into the wedding industry as caterers. Soon after, we became hostesses and never really left.",
+      "As we grew up and started experiencing more of life's biggest moments, we realized how much we loved creating them. What started as a part-time job became a passion, and eventually, the idea for Marie-Kate.",
     ],
   },
   {
     heading: "What we actually do for you",
     body: [
-      "The honest version is that we take the weight of it. We are the ones emailing the florist, rebuilding the timeline when the ceremony shifts twenty minutes, and quietly fixing the thing you never find out went wrong.",
-      "What we want for you is simple. We want you to get to the end of your wedding day and realize you were fully in it the entire time.",
+      "What's the honest version? We take the weight off your shoulders. We handle the timelines, the emails, the moving pieces, and the little things you may never even know went wrong.",
+      "Our goal is simple: for you to be fully present on your wedding day, not worrying about what comes next, but enjoying every moment of it.",
     ],
   },
 ];
 
+/** PLACEHOLDER BIOS AND ROLES. Awaiting the founders' own words. */
 const each = [
   {
-    name: "Maddy",
+    name: "Lexi Marie",
     role: "Placeholder role",
     body: "A short, warm paragraph about who she is, what she is like to work with, and what she brings to a wedding. Not a resume. Something a bride reads and thinks, I want her there.",
-    photo: "Film photo: Maddy, candid portrait",
+    photo: "Film photo: Lexi, candid portrait",
   },
   {
-    name: "Lexi",
+    name: "Maddy Kate",
     role: "Placeholder role",
-    body: "The same for Lexi. Where their strengths differ is the interesting part, because it explains why hiring the two of them is different from hiring one planner.",
-    photo: "Film photo: Lexi, candid portrait",
+    body: "The same for Maddy. Where their strengths differ is the interesting part, because it explains why hiring the two of them is different from hiring one planner.",
+    photo: "Film photo: Maddy, candid portrait",
   },
 ];
 
@@ -53,14 +49,14 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         script="hello there"
-        title="Meet Maddy + Lexi"
-        intro="Two best friends who cannot walk past a beautifully set table without stopping."
+        title="Meet Lexi + Maddy"
+        intro="Two best friends who have always loved a good event."
       />
 
       <section className="px-6 pb-24 sm:px-10">
         <Reveal className="mx-auto max-w-[1200px]">
           <PlaceholderImage
-            label="Editorial film photo: Maddy and Lexi together, full width"
+            label="Editorial film photo: Lexi and Maddy laughing, sitting down"
             ratio="16/9"
             tone="taupe"
           />
@@ -82,9 +78,6 @@ export default function AboutPage() {
               ))}
             </Reveal>
           ))}
-          <PlaceholderNote>
-            Placeholder copy, to be rewritten by the founders
-          </PlaceholderNote>
         </div>
       </section>
 
@@ -92,9 +85,6 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1200px]">
           <Reveal className="flex flex-col items-center gap-6 text-center">
             <SectionLabel align="center">The Two of Us</SectionLabel>
-            <h2 className="font-display text-4xl sm:text-5xl">
-              Better together, honestly
-            </h2>
           </Reveal>
 
           <div className="mt-20 grid gap-14 sm:grid-cols-2 sm:gap-20">
@@ -121,15 +111,6 @@ export default function AboutPage() {
             </PlaceholderNote>
           </Reveal>
         </div>
-      </section>
-
-      <section className="px-6 py-28 sm:px-10 sm:py-40">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="font-display text-3xl leading-snug italic sm:text-4xl">
-            We are not selling timelines and vendor emails. We are selling the
-            feeling of getting to be a guest at your own wedding.
-          </p>
-        </Reveal>
       </section>
 
       <ClosingCta

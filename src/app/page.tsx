@@ -10,7 +10,7 @@ import {
 } from "@/components/ui";
 import { services } from "@/content/services";
 import { experience, testimonials } from "@/content/site-copy";
-import { featured, portfolio } from "@/content/portfolio";
+import { portfolio } from "@/content/portfolio";
 import LeadMagnet from "@/components/LeadMagnet";
 
 export default function Home() {
@@ -47,7 +47,7 @@ export default function Home() {
       {/* 3. Philosophy ---------------------------------------------------- */}
       <section className="px-6 py-28 sm:px-10 sm:py-44">
         <Reveal className="mx-auto flex max-w-3xl flex-col items-center gap-10 text-center">
-          <SectionLabel align="center">Our Philosophy</SectionLabel>
+          <SectionLabel align="center">Our Why</SectionLabel>
           <h2 className="font-display text-3xl leading-[1.18] sm:text-5xl">
             Your love story deserves more than a beautiful day. It deserves an
             experience that feels entirely like you.
@@ -65,9 +65,6 @@ export default function Home() {
         <div className="mx-auto max-w-[1400px]">
           <Reveal className="flex flex-col items-center gap-6 text-center">
             <SectionLabel align="center">Our Services</SectionLabel>
-            <h2 className="font-display max-w-2xl text-4xl sm:text-5xl">
-              However much of it you want us to carry
-            </h2>
           </Reveal>
 
           <div className="mt-20 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
@@ -124,50 +121,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Featured wedding ---------------------------------------------- */}
-      <section className="bg-white">
-        <Reveal className="relative">
-          <div className="relative">
-            <PlaceholderImage
-              label={featured.cover}
-              ratio="16/9"
-              tone="sage"
-              className="hidden sm:block"
-              quiet
-            />
-            <PlaceholderImage
-              label={featured.cover}
-              ratio="4/5"
-              tone="sage"
-              className="sm:hidden"
-              quiet
-            />
-            <div className="from-espresso/70 pointer-events-none absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
-            <div className="text-ivory absolute inset-x-0 bottom-0 px-6 pb-12 text-center sm:px-10 sm:pb-16">
-              <p className="label text-ivory/80">Featured Celebration</p>
-              <h2 className="font-display mt-4 text-4xl sm:text-6xl">
-                {featured.title}
-              </h2>
-              <p className="label text-ivory/80 mt-4">{featured.meta}</p>
-              <div className="mt-8">
-                <ArrowLink
-                  href={`/portfolio/${featured.slug}`}
-                  className="text-ivory"
-                >
-                  View the Wedding
-                </ArrowLink>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
       {/* 7. Meet the girls ------------------------------------------------ */}
       <section className="px-6 py-28 sm:px-10 sm:py-40">
         <div className="mx-auto grid max-w-[1400px] items-center gap-14 lg:grid-cols-2 lg:gap-24">
           <Reveal>
             <PlaceholderImage
-              label="Film photo: Maddy and Lexi together, warm and candid"
+              label="Film photo: Lexi and Maddy standing together, black and white"
               ratio="4/5"
               tone="ivory"
             />
@@ -178,15 +137,11 @@ export default function Home() {
               Two best friends. One shared love for celebrations.
             </h2>
             <p className="text-espresso-soft mt-8 text-base leading-relaxed">
-              We have been in each other&rsquo;s lives long enough to finish
-              each other&rsquo;s sentences, which turns out to be a useful skill
-              on a wedding day. Between the two of us there is a planner and a
-              designer, and neither of us can help ourselves when it comes to
-              the details.
+              Hi we&rsquo;re Lexi and Maddy! We have been in each others lives
+              long enough to finish each others sentences, which turns out to be
+              a useful skill on a wedding day. Between the two of us we can make
+              your vision come to life and your day as stress free as possible.
             </p>
-            <PlaceholderNote className="mt-6">
-              Placeholder copy, to be written with the founders
-            </PlaceholderNote>
             <div className="mt-10">
               <ArrowLink href="/about">Meet Us</ArrowLink>
             </div>
