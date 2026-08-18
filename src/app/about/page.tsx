@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import { ClosingCta, PlaceholderNote, SectionLabel } from "@/components/ui";
 
@@ -55,10 +56,13 @@ export default function AboutPage() {
 
       <section className="px-6 pb-24 sm:px-10">
         <Reveal className="mx-auto max-w-[1200px]">
-          <PlaceholderImage
-            label="Studio photo: Lexi and Maddy sitting together on a stool"
+          <Photo
+            src="/photos/about-hero.jpg"
+            alt="The two founders of Marie Kate Events, sitting together"
             ratio="16/9"
-            tone="taupe"
+            position="center 55%"
+            sizes="(min-width: 1200px) 1200px, 100vw"
+            priority
           />
         </Reveal>
       </section>

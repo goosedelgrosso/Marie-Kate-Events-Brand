@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import PlaceholderImage from "./PlaceholderImage";
+import Photo from "./Photo";
 import Reveal from "./Reveal";
 import { SectionLabel, PlaceholderNote } from "./ui";
 import { guideContents } from "@/content/site-copy";
@@ -19,10 +19,11 @@ export default function LeadMagnet() {
     <section className="bg-ivory-deep px-6 py-24 sm:px-10 sm:py-36">
       <div className="mx-auto grid max-w-[1200px] items-center gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-24">
         <Reveal>
-          <PlaceholderImage
-            label="Studio photo: Lexi and Maddy standing, each holding a laptop"
+          <Photo
+            src="/photos/free-guide.jpg"
+            alt="The two founders of Marie Kate Events, each holding a laptop"
             ratio="1/1"
-            tone="taupe"
+            sizes="(min-width: 1024px) 45vw, 100vw"
           />
         </Reveal>
 

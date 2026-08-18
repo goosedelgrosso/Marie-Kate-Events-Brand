@@ -8,7 +8,10 @@ export type Service = {
   /** Optional grouped detail, used where the timing needs to be explicit. */
   groups?: { title: string; items: string[] }[];
   includes?: string[];
+  /** Placeholder label, used until `image` exists. */
   photo: string;
+  /** Real photo under /public. Frames without one still render a placeholder. */
+  image?: string;
 };
 
 export const services: Service[] = [
@@ -39,6 +42,7 @@ export const services: Service[] = [
       "Setup and breakdown",
     ],
     photo: "Studio photo: Lexi and Maddy planning on the floor, laptop and Marie Kate stationery",
+    image: "/photos/full-service.jpg",
   },
   {
     slug: "partial-planning",
@@ -90,6 +94,7 @@ export const services: Service[] = [
       },
     ],
     photo: "Studio photo: Lexi and Maddy holding bridal magazines in front of their faces",
+    image: "/photos/day-of.jpg",
   },
   {
     slug: "other-than-weddings",

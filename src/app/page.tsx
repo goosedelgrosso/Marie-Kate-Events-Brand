@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import {
   ArrowLink,
@@ -71,12 +72,21 @@ export default function Home() {
             {services.map((service, i) => (
               <Reveal key={service.slug} delay={i * 90}>
                 <Link href="/services" className="group block">
-                  <PlaceholderImage
-                    label={service.photo}
-                    ratio="4/5"
-                    tone={i % 2 === 0 ? "ivory" : "taupe"}
-                    quiet
-                  />
+                  {service.image ? (
+                    <Photo
+                      src={service.image}
+                      alt={service.name}
+                      ratio="4/5"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    />
+                  ) : (
+                    <PlaceholderImage
+                      label={service.photo}
+                      ratio="4/5"
+                      tone={i % 2 === 0 ? "ivory" : "taupe"}
+                      quiet
+                    />
+                  )}
                   <p className="label text-taupe mt-7">{service.number}</p>
                   <h3 className="font-display mt-3 text-2xl">{service.name}</h3>
                   <p className="text-espresso-soft mt-3 text-sm leading-relaxed">
@@ -125,10 +135,10 @@ export default function Home() {
       <section className="px-6 py-28 sm:px-10 sm:py-40">
         <div className="mx-auto grid max-w-[1400px] items-center gap-14 lg:grid-cols-2 lg:gap-24">
           <Reveal>
-            <PlaceholderImage
-              label="Studio photo: Lexi and Maddy standing together, black and white"
+            <Photo
+              src="/photos/meet-the-girls.jpg"
+              alt="The two founders of Marie Kate Events, standing together"
               ratio="4/5"
-              tone="ivory"
             />
           </Reveal>
           <Reveal delay={120} className="lg:pr-10">

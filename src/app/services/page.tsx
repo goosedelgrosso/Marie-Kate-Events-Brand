@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import {
   ButtonLink,
@@ -57,13 +58,21 @@ export default function ServicesPage() {
               }`}
             >
               <Reveal>
-                <PlaceholderImage
-                  label={service.photo}
-                  ratio="4/5"
-                  tone={
-                    (["ivory", "taupe", "sage", "espresso"] as const)[i % 4]
-                  }
-                />
+                {service.image ? (
+                  <Photo
+                    src={service.image}
+                    alt={service.name}
+                    ratio="4/5"
+                  />
+                ) : (
+                  <PlaceholderImage
+                    label={service.photo}
+                    ratio="4/5"
+                    tone={
+                      (["ivory", "taupe", "sage", "espresso"] as const)[i % 4]
+                    }
+                  />
+                )}
               </Reveal>
 
               <Reveal delay={100}>
