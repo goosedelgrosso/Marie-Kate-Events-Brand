@@ -60,52 +60,8 @@ export const services: Service[] = [
     photo: "Film photo: bride's shoes and invitation suite on linen",
   },
   {
-    slug: "month-of-coordination",
-    number: "03",
-    name: "Month-of Coordination",
-    short:
-      "You've planned the celebration. We'll make sure it all comes together seamlessly.",
-    intro:
-      "You have done the planning yourself, and you have done it well. What is left is the handoff. We come in roughly six weeks out, learn everything you have built, and take the logistics off your plate so the last month before your wedding feels like anticipation instead of admin.",
-    groups: [
-      {
-        title: "Six weeks out",
-        items: [
-          "Full handoff meeting where you walk us through everything",
-          "Review of every vendor contract",
-          "We become the point of contact for all of your vendors",
-          "Detailed wedding day timeline built and shared with everyone",
-          "Floor plan and layout finalized",
-        ],
-      },
-      {
-        title: "Wedding week",
-        items: [
-          "Final vendor confirmations",
-          "Timeline distributed to your vendor team and wedding party",
-          "Final walkthrough at the venue",
-          "Rehearsal coordination",
-          "Collection of all personal items, signage, and details",
-        ],
-      },
-      {
-        title: "Wedding day",
-        items: [
-          "On site from setup through breakdown",
-          "Full vendor management",
-          "Setup of all personal details and decor",
-          "Timeline management for the entire day",
-          "Wedding party and family cues",
-          "Quiet problem solving before you ever hear about it",
-          "Breakdown and return of personal items",
-        ],
-      },
-    ],
-    photo: "Film photo: tablescape detail, candles and menu cards",
-  },
-  {
     slug: "wedding-day-coordination",
-    number: "04",
+    number: "03",
     name: "Wedding Day Coordination",
     short:
       "Your only job is to enjoy the day. We'll handle everything happening behind the scenes.",

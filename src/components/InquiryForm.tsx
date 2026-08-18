@@ -5,7 +5,6 @@ import { useState } from "react";
 const services = [
   "Full-Service Planning",
   "Partial Planning",
-  "Month-of Coordination",
   "Wedding Day Coordination",
   "A la carte add-ons",
   "Not sure yet",

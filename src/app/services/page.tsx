@@ -14,7 +14,7 @@ import { experience } from "@/content/site-copy";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Full-service planning, partial planning, month-of coordination, and wedding day coordination, plus a la carte add-ons.",
+    "Full-service planning, partial planning, and wedding day coordination, plus a la carte add-ons.",
 };
 
 export default function ServicesPage() {
