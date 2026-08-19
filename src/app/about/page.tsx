@@ -54,7 +54,6 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        script="hello there"
         title="Meet Lexi + Maddy"
         intro="Two best friends who have always loved a good event."
       />

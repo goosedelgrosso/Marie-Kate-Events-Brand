@@ -17,7 +17,6 @@ export default function InquirePage() {
     <>
       <PageHero
         eyebrow="Inquire"
-        script="hello"
         title="Let's make something beautiful."
         intro="Tell us a little about your love story, your plans, and the celebration you're dreaming about. We'd love to hear all about it."
       />
