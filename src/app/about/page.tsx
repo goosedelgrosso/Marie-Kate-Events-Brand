@@ -28,7 +28,7 @@ const story = [
   },
 ];
 
-/** The founders' own words. Roles are still unwritten, so none render yet. */
+/** The founders' own words. No job titles by choice, so none are rendered. */
 const each = [
   {
     name: "Lexi Marie",
