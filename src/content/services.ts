@@ -106,6 +106,7 @@ export const services: Service[] = [
     intro:
       "Not every celebration is a wedding. Bridal showers, bachelorette parties, baby showers, birthdays, engagement parties, and everything in between get the same care we bring to a wedding day. We take on the planning, the details, and the run of the day itself, so you get to actually enjoy the party you are throwing.",
     photo: "Film photo: the group on the Bach trip",
+    image: "/photos/other-than-weddings.jpg",
   },
 ];
 

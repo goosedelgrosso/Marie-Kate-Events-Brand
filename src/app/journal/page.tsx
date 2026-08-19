@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import { PlaceholderNote, SectionLabel } from "@/components/ui";
 import LeadMagnet from "@/components/LeadMagnet";
@@ -30,12 +31,21 @@ export default function JournalPage() {
             {posts.map((post, i) => (
               <Reveal as="article" key={post.slug} delay={i * 90}>
                 <Link href={`/journal/${post.slug}`} className="block">
-                  <PlaceholderImage
-                    label={post.cover}
-                    ratio="4/3"
-                    tone={tones[i % 3]}
-                    quiet
-                  />
+                  {post.image ? (
+                    <Photo
+                      src={post.image}
+                      alt={post.title}
+                      ratio="4/3"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    />
+                  ) : (
+                    <PlaceholderImage
+                      label={post.cover}
+                      ratio="4/3"
+                      tone={tones[i % 3]}
+                      quiet
+                    />
+                  )}
                   <div className="mt-6 flex items-center gap-3">
                     <span className="label text-taupe">{post.category}</span>
                     <span className="bg-taupe/60 h-px w-5" />

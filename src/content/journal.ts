@@ -15,6 +15,8 @@ export type JournalPost = {
   readTime: string;
   excerpt: string;
   cover: string;
+  /** Real photo under /public. Posts without one still render a placeholder. */
+  image?: string;
   /** True until the founders write and approve the real post. */
   draft: boolean;
   sections?: JournalSection[];
@@ -34,6 +36,7 @@ export const posts: JournalPost[] = [
     excerpt:
       "Before the Pinterest boards, venue tours, spreadsheets, and group texts begin, give yourselves a minute to actually enjoy it. Here is where we tell every newly engaged couple to start.",
     cover: "Film photo: the moment of getting engaged",
+    image: "/photos/journal-engaged.jpg",
     draft: false,
     sections: [
       {
@@ -133,6 +136,7 @@ export const posts: JournalPost[] = [
     excerpt:
       "The two get used interchangeably, and they are not the same job. The biggest difference is when they step in and how involved they are along the way.",
     cover: "Film photo: Maddy laying on the ground",
+    image: "/photos/journal-planner-vs-coordinator.jpg",
     draft: false,
     sections: [
       {
@@ -210,6 +214,7 @@ export const posts: JournalPost[] = [
     excerpt:
       "Twelve months, broken down month by month, so you know what deserves your attention now, what can wait, and when it is time to start making the smaller decisions.",
     cover: "Film photo: Maddy holding a paper reading \"you wouldn't be stressed\"",
+    image: "/photos/journal-utah-timeline.jpg",
     draft: false,
     sections: [
       {

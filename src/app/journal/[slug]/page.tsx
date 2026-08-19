@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import { ClosingCta, PlaceholderNote } from "@/components/ui";
 import { posts } from "@/content/journal";
@@ -47,7 +48,11 @@ export default async function JournalPostPage({
 
         <div className="px-6 sm:px-10">
           <Reveal className="mx-auto max-w-[1100px]">
-            <PlaceholderImage label={post.cover} ratio="16/9" tone="taupe" />
+            {post.image ? (
+              <Photo src={post.image} alt={post.title} ratio="16/9" sizes="100vw" />
+            ) : (
+              <PlaceholderImage label={post.cover} ratio="16/9" tone="taupe" />
+            )}
           </Reveal>
         </div>
 

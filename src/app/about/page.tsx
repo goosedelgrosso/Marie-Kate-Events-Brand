@@ -35,12 +35,14 @@ const each = [
     role: "Placeholder role",
     body: "A short, warm paragraph about who she is, what she is like to work with, and what she brings to a wedding. Not a resume. Something a bride reads and thinks, I want her there.",
     photo: "Film photo: Lexi, candid portrait",
+    image: "/photos/founder-lexi.jpg",
   },
   {
     name: "Maddy Kate",
     role: "Placeholder role",
     body: "The same for Maddy. Where their strengths differ is the interesting part, because it explains why hiring the two of them is different from hiring one planner.",
     photo: "Film photo: Maddy, candid portrait",
+    image: "/photos/founder-maddy.jpg",
   },
 ];
 
@@ -94,12 +96,21 @@ export default function AboutPage() {
           <div className="mt-20 grid gap-14 sm:grid-cols-2 sm:gap-20">
             {each.map((person, i) => (
               <Reveal key={person.name} delay={i * 100}>
-                <PlaceholderImage
-                  label={person.photo}
-                  ratio="4/5"
-                  tone={i === 0 ? "ivory" : "sage"}
-                  quiet
-                />
+                {person.image ? (
+                  <Photo
+                    src={person.image}
+                    alt={person.name}
+                    ratio="4/5"
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                  />
+                ) : (
+                  <PlaceholderImage
+                    label={person.photo}
+                    ratio="4/5"
+                    tone={i === 0 ? "ivory" : "sage"}
+                    quiet
+                  />
+                )}
                 <h3 className="font-display mt-8 text-3xl">{person.name}</h3>
                 <p className="label text-taupe mt-2">{person.role}</p>
                 <p className="text-espresso-soft mt-5 text-base leading-relaxed">
