@@ -7,9 +7,8 @@ export const site = {
   name: "Marie Kate Events",
   tagline: "Thoughtful celebrations, beautifully brought to life.",
   url: "https://mariekateevents.com",
-  // PLACEHOLDER: confirm handle with founders
-  instagram: "@mariekateevents",
-  instagramUrl: "https://instagram.com/mariekateevents",
+  instagram: "@mariekate.events",
+  instagramUrl: "https://instagram.com/mariekate.events",
   // PLACEHOLDER: confirm business email with founders
   email: "hello@mariekateevents.com",
   // PLACEHOLDER: confirm service area (Utah only, or willing to travel)
