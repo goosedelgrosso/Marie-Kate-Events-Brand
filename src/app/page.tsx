@@ -11,7 +11,6 @@ import {
 } from "@/components/ui";
 import { services } from "@/content/services";
 import { experience, testimonials } from "@/content/site-copy";
-import { portfolio } from "@/content/portfolio";
 import LeadMagnet from "@/components/LeadMagnet";
 
 export default function Home() {
@@ -171,41 +170,6 @@ export default function Home() {
             Placeholder testimonial, not from a real client
           </PlaceholderNote>
         </Reveal>
-      </section>
-
-      {/* 9. Portfolio ------------------------------------------------------ */}
-      <section className="px-6 py-28 sm:px-10 sm:py-40">
-        <div className="mx-auto max-w-[1400px]">
-          <Reveal className="flex flex-col items-center gap-6 text-center">
-            <SectionLabel align="center">Portfolio</SectionLabel>
-            <h2 className="font-display max-w-2xl text-4xl sm:text-5xl">
-              A look at the celebrations we are dreaming up
-            </h2>
-          </Reveal>
-
-          <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {portfolio.map((entry, i) => (
-              <Reveal key={entry.slug} delay={i * 80}>
-                <Link href={`/portfolio/${entry.slug}`} className="block">
-                  <PlaceholderImage
-                    label={entry.cover}
-                    ratio="3/4"
-                    tone={
-                      (["ivory", "sage", "taupe", "espresso"] as const)[i % 4]
-                    }
-                    quiet
-                  />
-                  <h3 className="font-display mt-6 text-xl">{entry.title}</h3>
-                  <p className="label text-taupe mt-2">{entry.meta}</p>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal className="mt-20 text-center">
-            <ArrowLink href="/portfolio">View All</ArrowLink>
-          </Reveal>
-        </div>
       </section>
 
       {/* 10. Free wedding guide -------------------------------------------- */}
