@@ -61,6 +61,7 @@ export const services: Service[] = [
       "Full wedding day management, setup, and breakdown",
     ],
     photo: "Film photo: from a wedding day",
+    image: "/photos/partial-planning.jpg",
   },
   {
     slug: "wedding-day-coordination",

@@ -6,7 +6,6 @@ import Reveal from "@/components/Reveal";
 import {
   ButtonLink,
   ClosingCta,
-  PlaceholderNote,
   SectionLabel,
 } from "@/components/ui";
 import { addOns, services } from "@/content/services";
@@ -211,10 +210,6 @@ export default function ServicesPage() {
             Every wedding is priced to what it actually takes. Send us an
             inquiry and we will follow up with a full pricing guide.
           </p>
-          <PlaceholderNote className="mt-8">
-            Open question: whether pricing appears on this page or only after an
-            inquiry
-          </PlaceholderNote>
         </Reveal>
       </section>
 

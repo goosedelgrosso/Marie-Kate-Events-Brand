@@ -3,7 +3,7 @@ import PageHero from "@/components/PageHero";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
-import { ClosingCta, PlaceholderNote, SectionLabel } from "@/components/ui";
+import { ClosingCta, SectionLabel } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "About",
@@ -15,7 +15,7 @@ const story = [
   {
     heading: "How we got here",
     body: [
-      "We met in seventh grade and have been side by side ever since. We spent four years on the mountain bike team together, and at sixteen, we found our way into the wedding industry as caterers. Soon after, we became hostesses and never really left.",
+      "We met in seventh grade and have been side by side ever since. We spent four years on the mountain bike team together, and at sixteen, we found our way into the wedding industry as caterers. Soon after we became hostesses, then coordinators, and eventually vendors in our own right, with Maddy making signage and Lexi taking on rentals. Between the two of us, we have been a part of over a thousand weddings, too many to count at this point.",
       "As we grew up and started experiencing more of life's biggest moments, we realized how much we loved creating them. What started as a part-time job became a passion, and eventually, the idea for Marie-Kate.",
     ],
   },
@@ -28,19 +28,22 @@ const story = [
   },
 ];
 
-/** PLACEHOLDER BIOS AND ROLES. Awaiting the founders' own words. */
+/** The founders' own words. Roles are still unwritten, so none render yet. */
 const each = [
   {
     name: "Lexi Marie",
-    role: "Placeholder role",
-    body: "A short, warm paragraph about who she is, what she is like to work with, and what she brings to a wedding. Not a resume. Something a bride reads and thinks, I want her there.",
+    body: [
+      "Hi I'm Lexi! I've been planning parties, get-togethers, and special moments for friends for literally as long as I can remember. If there was an excuse to celebrate, I was planning it. That lifelong obsession naturally morphed into a full-blown career, starting behind the scenes as a caterer and hostess when I was 16. Now, after spending the last year as a wedding coordinator, I know weddings inside and out. I want your day to be fun, stress free, and absolutely perfect! I'm your hype woman, your steady anchor, and the friend who's got every single detail covered so you can just focus on marrying your person and partying the night away!",
+    ],
     photo: "Film photo: Lexi, candid portrait",
     image: "/photos/founder-lexi.jpg",
   },
   {
     name: "Maddy Kate",
-    role: "Placeholder role",
-    body: "The same for Maddy. Where their strengths differ is the interesting part, because it explains why hiring the two of them is different from hiring one planner.",
+    body: [
+      "I've always loved bringing people together and being part of the moments that matter most. After five years in the events industry, I've found that I especially love the little details that make a wedding feel personal and true to the couple.",
+      "Before wedding planning, I was a D1 track & field athlete, which taught me a lot about discipline, staying organized, and keeping my cool when things don't go according to plan. Outside of work and track, I'm usually looking for a new place to explore, spending time outside, or finding an excuse to get together with the people I love.",
+    ],
     photo: "Film photo: Maddy, candid portrait",
     image: "/photos/founder-maddy.jpg",
   },
@@ -112,19 +115,17 @@ export default function AboutPage() {
                   />
                 )}
                 <h3 className="font-display mt-8 text-3xl">{person.name}</h3>
-                <p className="label text-taupe mt-2">{person.role}</p>
-                <p className="text-espresso-soft mt-5 text-base leading-relaxed">
-                  {person.body}
-                </p>
+                {person.body.map((para) => (
+                  <p
+                    key={para}
+                    className="text-espresso-soft mt-5 text-base leading-relaxed"
+                  >
+                    {para}
+                  </p>
+                ))}
               </Reveal>
             ))}
           </div>
-
-          <Reveal className="mt-16 text-center">
-            <PlaceholderNote>
-              Placeholder bios and roles, to be confirmed with the founders
-            </PlaceholderNote>
-          </Reveal>
         </div>
       </section>
 
