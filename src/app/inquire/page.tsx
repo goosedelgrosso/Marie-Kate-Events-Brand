@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import PlaceholderImage from "@/components/PlaceholderImage";
+import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import InquiryForm from "@/components/InquiryForm";
 import { SectionLabel } from "@/components/ui";
@@ -29,10 +29,12 @@ export default function InquirePage() {
           </Reveal>
 
           <Reveal delay={140} className="lg:sticky lg:top-32">
-            <PlaceholderImage
-              label="Film photo: Lexi and Maddy laughing, at Studios"
+            <Photo
+              src="/photos/inquire.jpg"
+              alt="Lexi and Maddy laughing together on a stool in the studio"
               ratio="4/5"
-              tone="taupe"
+              position="center bottom"
+              sizes="(min-width: 1024px) 520px, 100vw"
             />
 
             <div className="mt-10">
