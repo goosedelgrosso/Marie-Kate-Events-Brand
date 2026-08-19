@@ -60,7 +60,7 @@ export default function AboutPage() {
         <Reveal className="mx-auto max-w-[1200px]">
           <Photo
             src="/photos/about-hero.jpg"
-            alt="The two founders of Marie Kate Events, sitting together"
+            alt="Lexi and Maddy, the founders of Marie Kate Events, standing side by side"
             ratio="16/9"
             position="center 55%"
             sizes="(min-width: 1200px) 1200px, 100vw"
