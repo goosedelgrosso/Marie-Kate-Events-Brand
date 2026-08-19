@@ -23,18 +23,19 @@ export const experience = [
 ];
 
 /**
- * PLACEHOLDER TESTIMONIALS. Not from real clients. These exist to show the
- * layout only and are labeled as placeholders everywhere they appear.
- * Do not publish the site with these still in place.
+ * The first entry is a real testimonial from Heidi, sent by text and used with
+ * her words trimmed, not reworded. Entries below it are still PLACEHOLDERS,
+ * not from real clients, and are not rendered anywhere. Only `testimonials[0]`
+ * appears on the site today.
  */
 export const testimonials = [
   {
-    quote: "They made the entire process feel effortless.",
-    author: "Client name",
+    quote:
+      "She paid attention to every little detail, which gave me so much peace of mind. Having her there meant there were so many fewer things I had to worry about.",
+    author: "Heidi",
   },
   {
-    quote:
-      "I actually got to be at my own wedding. I did not think about a single detail all day.",
+    quote: "They made the entire process feel effortless.",
     author: "Client name",
   },
   {
