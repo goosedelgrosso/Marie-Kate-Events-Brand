@@ -7,7 +7,6 @@ import {
   ArrowLink,
   ButtonLink,
   ClosingCta,
-  PlaceholderNote,
   SectionLabel,
 } from "@/components/ui";
 import { services } from "@/content/services";
@@ -163,12 +162,9 @@ export default function Home() {
         <Reveal className="mx-auto flex max-w-3xl flex-col items-center gap-10 text-center">
           <SectionLabel align="center">Kind Words</SectionLabel>
           <blockquote className="font-display text-3xl leading-snug italic sm:text-5xl">
-            &ldquo;{testimonials[1].quote}&rdquo;
+            &ldquo;{testimonials[0].quote}&rdquo;
           </blockquote>
-          <p className="label text-espresso-soft">{testimonials[1].author}</p>
-          <PlaceholderNote>
-            Placeholder testimonial, not from a real client
-          </PlaceholderNote>
+          <p className="label text-espresso-soft">{testimonials[0].author}</p>
         </Reveal>
       </section>
 
