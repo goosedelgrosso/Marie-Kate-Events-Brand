@@ -15,7 +15,7 @@ const story = [
   {
     heading: "How we got here",
     body: [
-      "We met in seventh grade and have been side by side ever since. We spent four years on the mountain bike team together, and at sixteen, we found our way into the wedding industry as caterers. Soon after we became hostesses, then coordinators, and eventually vendors in our own right, with Maddy making signage and Lexi taking on rentals. Between the two of us, we have been a part of over a thousand weddings, too many to count at this point.",
+      "We met in seventh grade and have been side by side ever since. We spent four years on the mountain bike team together, and at sixteen, we found our way into the wedding industry as caterers. Soon after we became hostesses, then coordinators, and eventually vendors in our own right, with Maddy making signage and Lexi taking on rentals. Between the two of us, we have done over a hundred weddings.",
       "As we grew up and started experiencing more of life's biggest moments, we realized how much we loved creating them. What started as a part-time job became a passion, and eventually, the idea for Marie-Kate.",
     ],
   },
