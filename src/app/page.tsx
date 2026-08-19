@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import HeroVideo from "@/components/HeroVideo";
 import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import {
@@ -18,11 +19,10 @@ export default function Home() {
     <>
       {/* 2. Hero ---------------------------------------------------------- */}
       <section className="relative flex min-h-[100svh] items-end overflow-hidden">
-        <PlaceholderImage
-          fill
-          tone="espresso"
-          label="Hero film photo or video: couple walking away, movement, warm light"
-          quiet
+        <HeroVideo
+          src="/video/hero-loop.mp4"
+          poster="/photos/hero-poster.jpg"
+          alt="A couple walking out through an arch of sparklers at dusk"
         />
         <div className="from-espresso/85 pointer-events-none absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
 
