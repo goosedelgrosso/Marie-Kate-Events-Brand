@@ -65,7 +65,7 @@ export default function AboutPage() {
             src="/photos/about-hero.jpg"
             alt="Lexi and Maddy, the founders of Marie Kate Events, standing side by side"
             ratio="16/9"
-            position="center 55%"
+            position="center top"
             sizes="(min-width: 1200px) 1200px, 100vw"
             priority
           />
